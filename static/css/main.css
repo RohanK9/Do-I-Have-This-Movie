@@ -1,0 +1,12 @@
+.form {
+    text-align: center;
+}
+
+.textbox {
+    width: 250px;
+    height: 25px;
+}
+
+input[type="text"]::placeholder{
+    text-align: center;
+}

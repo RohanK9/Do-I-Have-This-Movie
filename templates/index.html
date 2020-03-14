@@ -1,1 +1,22 @@
-Hi from my movie thing
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" >
+    {% block head %}{% endblock %}
+</head>
+<body>
+    {% block body %}
+    <div class="form">
+        <h1>Do I have this movie?</h1>
+        <form action="/" method="POST">
+            <input type="text" class="textbox" name="title" id="title" placeholder="Enter the name of a movie">
+            <br><br>
+            <input type="submit" value="Check">
+        </form>
+    </div>
+    {% endblock %}
+</body>
+</html>

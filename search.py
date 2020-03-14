@@ -7,16 +7,18 @@ cursor = connection.cursor()
 def searchTable(fileToSearchFor):
 
    movieFound = False
-
-   # fileToSearchFor = input("Please enter the name of the movie you are looking for: ")
    
    searchResults = cursor.execute("SELECT * FROM files WHERE fileName LIKE ?", ('%'+fileToSearchFor+'%',))
 
+   result = ""
+
    for name in searchResults:
-      print(name[0])
+      result = name[0]
       movieFound = True
 
    if not movieFound:
-      print("File does not exist")
+      result = "File does not exist"
 
-   return "Hello world"
+   print(result)
+
+searchTable()
