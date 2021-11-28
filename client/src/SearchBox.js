@@ -10,7 +10,7 @@ function SearchBox() {
     function handleSubmit(event) {
         event.preventDefault();
 
-        const apiURL = 'http://127.0.0.1:5000/search/' + query;
+        const apiURL = 'http://doihavethismovie.herokuapp.com/search/' + query;
         fetch(apiURL)
             .then(res => res.json())
             .then(
