@@ -10,7 +10,7 @@ function SearchBox() {
     function handleSubmit(event) {
         event.preventDefault();
 
-        const apiURL = 'http://doihavethismovie.herokuapp.com/search/' + query;
+        const apiURL = 'https://doihavethismovie.herokuapp.com/search/' + query;
         fetch(apiURL)
             .then(res => res.json())
             .then(
