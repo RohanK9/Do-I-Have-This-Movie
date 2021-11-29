@@ -12,8 +12,8 @@ function SearchResults({ movies }) {
                     </TableHead>
                     <TableBody>
                         {
-                            (movies || []).map((movie) => (
-                                <TableRow key={movie}>
+                            (movies || []).map((movie, index) => (
+                                <TableRow key={index}>
                                     <TableCell style={styles.row} align="left">{movie}</TableCell>
                                 </TableRow>
                             ))

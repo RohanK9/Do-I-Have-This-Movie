@@ -16,7 +16,7 @@ function SearchBox() {
             .then(
                 (result) => {
                     console.log(result);
-                    setResults(result)
+                    setResults(result);
                 },
                 (error) => {
                     console.log(error);
